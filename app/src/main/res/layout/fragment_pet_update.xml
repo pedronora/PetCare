@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.pet.update.PetUpdateFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingBottom="@dimen/default_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="5dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="5dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintStart_toStartOf="@+id/guide_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pc_logo_2" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/atualizar"
+                android:textColor="@color/purple_700"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/iv_pet_picture"
+                app:layout_constraintEnd_toStartOf="@+id/guide_end"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_pet_picture"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/fotografia"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blank_image"
+                app:layout_constraintEnd_toEndOf="@id/guide_end"
+                app:layout_constraintStart_toStartOf="@id/guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <Button
+                android:id="@+id/btn_take_picture"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tirar Foto"
+                app:layout_constraintEnd_toEndOf="@id/guide_end"
+                app:layout_constraintStart_toStartOf="@id/guide_start"
+                app:layout_constraintTop_toBottomOf="@id/iv_pet_picture" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dose"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/label_nome"
+                app:layout_constraintEnd_toEndOf="@id/guide_end"
+                app:layout_constraintStart_toStartOf="@+id/guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/btn_take_picture">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapSentences|textAutoCorrect" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_date"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/label_date"
+                app:startIconDrawable="@drawable/ic_calendar"
+                app:layout_constraintTop_toBottomOf="@id/til_dose"
+                app:layout_constraintStart_toStartOf="@id/guide_start"
+                app:layout_constraintEnd_toEndOf="@id/guide_end" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/voltar"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp"
+                app:cornerRadius="6dp"
+                app:layout_constraintStart_toStartOf="@+id/guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/til_date" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_registrar"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/atualizar"
+                android:textSize="18sp"
+                app:cornerRadius="6dp"
+                app:backgroundTint="@color/purple_500"
+                app:layout_constraintEnd_toStartOf="@+id/guide_end"
+                app:layout_constraintTop_toBottomOf="@+id/til_date" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

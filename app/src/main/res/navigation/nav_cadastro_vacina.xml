@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_cadastro_vacina"
+    app:startDestination="@id/vacinaListFragment">
+
+    <fragment
+        android:id="@+id/vacinaListFragment"
+        android:name="com.project.petcare.ui.vacina.list.VacinaListFragment"
+        android:label="fragment_vacina_list"
+        tools:layout="@layout/fragment_vacina_list" >
+        <action
+            android:id="@+id/action_vacinaListFragment_to_vacinaCreateFragment"
+            app:destination="@id/vacinaCreateFragment" />
+        <action
+            android:id="@+id/action_vacinaListFragment_to_vacinaUpdateFragment"
+            app:destination="@id/vacinaUpdateFragment" />
+        <action
+            android:id="@+id/action_vacinaListFragment_to_vacinaDetailFragment"
+            app:destination="@id/vacinaDetailFragment" />
+        <argument
+            android:name="petId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacinaCreateFragment"
+        android:name="com.project.petcare.ui.vacina.create.VacinaCreateFragment"
+        android:label="fragment_vacina_create"
+        tools:layout="@layout/fragment_vacina_create" >
+        <action
+            android:id="@+id/action_vacinaCreateFragment_to_vacinaListFragment"
+            app:destination="@id/vacinaListFragment" />
+        <argument
+            android:name="petId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacinaUpdateFragment"
+        android:name="com.project.petcare.ui.vacina.update.VacinaUpdateFragment"
+        android:label="fragment_vacina_update"
+        tools:layout="@layout/fragment_vacina_update" >
+        <action
+            android:id="@+id/action_vacinaUpdateFragment_to_vacinaListFragment"
+            app:destination="@id/vacinaListFragment" />
+        <argument
+            android:name="currentVacina"
+            app:argType="com.project.petcare.model.Vacina" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacinaDetailFragment"
+        android:name="com.project.petcare.ui.vacina.detail.VacinaDetailFragment"
+        android:label="fragment_vacina_detail"
+        tools:layout="@layout/fragment_vacina_detail" >
+        <action
+            android:id="@+id/action_vacinaDetailFragment_to_vacinaListFragment"
+            app:destination="@id/vacinaListFragment" />
+        <argument
+            android:name="currentVacina"
+            app:argType="com.project.petcare.model.Vacina" />
+    </fragment>
+</navigation>

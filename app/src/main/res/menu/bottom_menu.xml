@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_tutor"
+        android:icon="@drawable/ic_person"
+        android:title="Tutor" />
+    <item
+        android:id="@+id/menu_pet"
+        android:icon="@drawable/ic_pets"
+        android:title="Pets" />
+    <item
+        android:id="@+id/menu_descubra"
+        android:icon="@drawable/ic_search"
+        android:title="Descubra" />
+    <item
+        android:id="@+id/invisible"
+        android:title="Invisible"
+        android:visible="false" />
+</menu>

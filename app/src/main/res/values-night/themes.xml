@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PetCare" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color and Navigation bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor" tools:target="l">?attr/colorPrimaryVariant</item>
+    </style>
+    <!-- Estilo base de cor e tipo de fonte  -->
+    <style name="textStyleBase">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+    <!-- Estilo tamanho da fonte do título  -->
+    <style name="textTitleStyle" parent="@style/textStyleBase">
+        <item name="android:textSize">@dimen/text_title_size</item>
+    </style>
+    <!-- Estilo tamanho da fonte do texto  -->
+    <style name="textBodyStyle" parent="@style/textStyleBase">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>

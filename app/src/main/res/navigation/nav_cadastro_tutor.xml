@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_cadastro_tutor"
+    app:startDestination="@id/detailTutorFragment">
+
+    <fragment
+        android:id="@+id/detailTutorFragment"
+        android:name="com.project.petcare.ui.tutor.detail.DetailTutorFragment"
+        android:label="fragment_detail_tutor"
+        tools:layout="@layout/fragment_tutor_detail">
+        <action
+            android:id="@+id/action_detailTutorFragment_to_updateTutorFragment"
+            app:destination="@id/updateTutorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTutorFragment"
+        android:name="com.project.petcare.ui.tutor.update.UpdateTutorFragment"
+        android:label="fragment_update_tutor"
+        tools:layout="@layout/fragment_tutor_update">
+        <action
+            android:id="@+id/action_updateTutorFragment_to_detailTutorFragment"
+            app:destination="@id/detailTutorFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">PetCare</string>
+    <string name="label_registrar">Registrar</string>
+    <string name="label_login">Login</string>
+    <string name="label_saudacao">Sejam bem-vindos!\n Queremos ajudá-los com\n os cuidados do seu Pet!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_title_tutor">Inserir dados do tutor</string>
+    <string name="label_nome">Nome</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_senha">Senha</string>
+    <string name="label_register">Registrar</string>
+    <string name="label_title_pet">Inserir dados do Pet</string>
+    <string name="label_update_pet">Atualizar dados do Pet</string>
+    <string name="label_date">Data de Nascimento</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="cadastrar_label">Cadastrar</string>
+    <string name="telefone_label">Telefone</string>
+    <string name="complete_o_cadastro">Complete o cadastro</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="data_de_aniversario_label">Data de Aniversário</string>
+    <string name="entrar_label">Entrar</string>
+    <string name="sair_label">Sair</string>
+    <string name="logoanimais">logoanimais</string>
+    <string name="appnome">appnome</string>
+    <string name="voltar">Voltar</string>
+    <string name="label_info_vacina">Informação das vacinas</string>
+    <string name="label_create_vacina">Caderneta de Vacinas</string>
+    <string name="label_tipo_vacina">Tipo da vacina</string>
+    <string name="label_data_vacina">Data administração</string>
+    <string name="label_dataProx_vacina">Próxima administração</string>
+    <string name="confirmacao_da_senha">Confirmação da Senha</string>
+    <string name="fotografia">Fotografia</string>
+</resources>

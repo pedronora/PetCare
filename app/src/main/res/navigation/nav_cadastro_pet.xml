@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_cadastro_pet"
+    app:startDestination="@id/petListFragment">
+
+    <fragment
+        android:id="@+id/petListFragment"
+        android:name="com.project.petcare.ui.pet.list.PetListFragment"
+        android:label="fragment_pet_list"
+        tools:layout="@layout/fragment_pet_list" >
+        <action
+            android:id="@+id/action_petListFragment_to_petCreateFragment"
+            app:destination="@id/petCreateFragment" />
+        <action
+            android:id="@+id/action_petListFragment_to_petUpdateFragment"
+            app:destination="@id/petUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petCreateFragment"
+        android:name="com.project.petcare.ui.pet.create.petCreateFragment"
+        android:label="fragment_pet_create"
+        tools:layout="@layout/fragment_pet_create" >
+        <action
+            android:id="@+id/action_petCreateFragment_to_petListFragment"
+            app:destination="@id/petListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petUpdateFragment"
+        android:name="com.project.petcare.ui.pet.update.PetUpdateFragment"
+        android:label="fragment_pet_update"
+        tools:layout="@layout/fragment_pet_update" >
+        <action
+            android:id="@+id/action_petUpdateFragment_to_petListFragment"
+            app:destination="@id/petListFragment" />
+        <argument
+            android:name="currentPet"
+            app:argType="com.project.petcare.model.Pet" />
+    </fragment>
+</navigation>
